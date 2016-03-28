@@ -11,7 +11,7 @@ namespace DefesaCivil.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return Content("HEEEY");
+            return View();
         } 
     }
 }
