@@ -10,6 +10,7 @@ using DefesaCivil.Domain.Models;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace DefesaCivil.Web
 {
@@ -35,11 +36,9 @@ namespace DefesaCivil.Web
                 .AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
-            /*
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-            */
 
             services.AddRouting();
             services.AddMvc();
@@ -68,6 +67,8 @@ namespace DefesaCivil.Web
             app.UseIISPlatformHandler();
 
             app.UseStaticFiles();
+
+            app.UseIdentity();
 
             app.UseMvc(routes =>
             {
