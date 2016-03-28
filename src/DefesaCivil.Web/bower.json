@@ -1,8 +1,6 @@
 {
   "name": "ASP.NET",
   "private": true,
-  "dependencies": {
-    "bootstrap": "3.3.5"
-  },
+  "dependencies": {},
   "directory": "wwwroot/lib"
 }

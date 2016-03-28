@@ -1,1 +1,5 @@
-﻿{ }
+﻿{
+  "DefaultConnection": {
+    "ConnectionString" :  "...conexao.."
+  }
+}
