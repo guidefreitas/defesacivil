@@ -23,9 +23,7 @@ namespace DefesaCivil.Domain.Models
         public Institute Institute { get; set; }
 
         [Required]
-        public ApplicationUser Creator { get; set; }
-
-        public float? Nota { get; set; }
+        public User Creator { get; set; }
 
     }
 }

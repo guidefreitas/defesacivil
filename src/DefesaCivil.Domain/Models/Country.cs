@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DefesaCivil.Domain.Models
 {
-    public class Pais : BaseModel
+    public class Country : BaseModel
     {
         [Required]
-        public String Nome { get; set; }
+        public String Name { get; set; }
 
-        public virtual ICollection<Estado> Estados { get; set; }
+        public virtual ICollection<State> States { get; set; }
     }
 }

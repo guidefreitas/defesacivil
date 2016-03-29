@@ -115,3 +115,11 @@ TODO: Informar aqui o link para o projeto do github dos sensores
 
 O sistema será desenvolvido utilizando ASP.NET MVC 6 (parte do ASP.NET 5) e Entity Framework 7. Ambos estão em beta e, portanto,
 podem ocorrer problemas de compatibilidade ao baixar o projeto.
+
+# Comandos Úteis
+
+## Criando o banco de dados a partir do EF7
+dnu restore
+dnvm use 1.0.0-rc1-final -p
+dnx ef migrations add Initial
+dnx ef database update

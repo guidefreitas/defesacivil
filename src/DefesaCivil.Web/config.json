@@ -1,5 +1,7 @@
 ﻿{
-  "DefaultConnection": {
-    "ConnectionString" :  "...conexao.."
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DefesaCivil;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+    }
   }
 }

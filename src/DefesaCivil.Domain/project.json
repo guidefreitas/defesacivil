@@ -6,7 +6,11 @@
   "projectUrl": "",
   "licenseUrl": "",
   "frameworks": {
-    "net451": { },
+    "net451": {
+      "dependencies": {
+        "EntityFramework.Commands": "7.0.0-rc1-final"
+      }
+    },
     "dotnet5.4": {
       "dependencies": {
         "Microsoft.CSharp": "4.0.1-beta-23516",

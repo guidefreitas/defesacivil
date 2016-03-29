@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DefesaCivil.Domain.Models
 {
-    public class Cidade : BaseModel
+    public class City : BaseModel
     {
         [Required]
-        public String Nome { get; set; }
+        public String Name { get; set; }
 
         [Required]
-        public Estado Estado { get; set; }
+        public State State { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DefesaCivil.Domain.Models
 {
-    public class SensorStatus
+    public class SensorStatus : BaseModel
     {
         public Sensor Sensor { get; set; }
         public SensorStatusType StatusType { get; set; }

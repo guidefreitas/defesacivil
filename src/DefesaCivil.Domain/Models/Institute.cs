@@ -9,11 +9,11 @@ namespace DefesaCivil.Domain.Models
     public class Institute : BaseModel
     {
         [Required]
-        public String Nome { get; set; }
+        public String Name { get; set; }
 
         [Required]
-        public Cidade Cidade { get; set; }
+        public City City { get; set; }
 
-        public ApplicationUser Administrador { get; set; }
+        public User Administrator { get; set; }
     }
 }
