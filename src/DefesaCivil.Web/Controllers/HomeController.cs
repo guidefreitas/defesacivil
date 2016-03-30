@@ -28,7 +28,7 @@ namespace DefesaCivil.Web.Controllers
             context.Countries.Add(c);
             context.SaveChanges();
 
-            var pais = context.Countries.Where(country => country.Name.StartsWith("Bra")).First();
+            var pais = context.Countries.ToList();
 
             return View();
         } 

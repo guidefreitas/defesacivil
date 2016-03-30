@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Data.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity.Infrastructure;
+using System.IO;
 
 namespace DefesaCivil.Domain.Models
 {
@@ -51,6 +52,6 @@ namespace DefesaCivil.Domain.Models
 
             base.OnModelCreating(modelBuilder);
         }
-       
+
     }
 }

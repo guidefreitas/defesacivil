@@ -10,7 +10,7 @@ namespace DefesaCivil.Domain.Models
     public class User : IdentityUser
     {
         [Key]
-        public String Username { get; set; }
+        public override String UserName { get; set; }
 
         [Required, StringLength(100)]
         public string Name { get; set; }

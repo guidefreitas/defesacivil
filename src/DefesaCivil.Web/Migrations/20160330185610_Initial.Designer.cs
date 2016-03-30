@@ -8,14 +8,13 @@ using DefesaCivil.Domain.Models;
 namespace DefesaCivil.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160329134631_Initial")]
+    [Migration("20160330185610_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
 
             modelBuilder.Entity("DefesaCivil.Domain.Models.City", b =>
                 {
@@ -173,8 +172,6 @@ namespace DefesaCivil.Web.Migrations
 
                     b.Property<string>("UserName")
                         .HasAnnotation("MaxLength", 256);
-
-                    b.Property<string>("Username");
 
                     b.HasKey("Id");
 

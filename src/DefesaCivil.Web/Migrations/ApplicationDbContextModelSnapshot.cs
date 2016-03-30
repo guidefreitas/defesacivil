@@ -13,8 +13,7 @@ namespace DefesaCivil.Web.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348");
 
             modelBuilder.Entity("DefesaCivil.Domain.Models.City", b =>
                 {
@@ -172,8 +171,6 @@ namespace DefesaCivil.Web.Migrations
 
                     b.Property<string>("UserName")
                         .HasAnnotation("MaxLength", 256);
-
-                    b.Property<string>("Username");
 
                     b.HasKey("Id");
 

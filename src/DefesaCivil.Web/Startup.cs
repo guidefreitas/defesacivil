@@ -31,10 +31,15 @@ namespace DefesaCivil.Web
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            /*
             services.AddEntityFramework()
                 .AddSqlServer()
                 .AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+            */
+            services.AddEntityFramework()
+                .AddSqlite()
+                .AddDbContext<ApplicationDbContext>(options => options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
