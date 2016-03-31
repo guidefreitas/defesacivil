@@ -41,17 +41,8 @@
     <link href="/assets/admin/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
 
 
-    <!--Demo script [ DEMONSTRATION ]-->
-    <link href="/assets/admin/css/demo/nifty-demo.min.css" rel="stylesheet">
-
-
-
-
-    <!--SCRIPT-->
-    <!--=================================================-->
-    <!--Page Load Progress Bar [ OPTIONAL ]-->
-    <link href="/assets/admin/plugins/pace/pace.min.css" rel="stylesheet">
-    <script src="/assets/admin/plugins/pace/pace.min.js"></script>
+    <!-- Datatables -->
+    <link href="/assets/admin/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
 
 
 
@@ -84,7 +75,7 @@
 <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
 
 <body>
-    <div id="container" class="effect mainnav-lg">
+    <div id="container" class="mainnav-lg">
         
 
         @Html.Partial("_NavBar")
@@ -145,14 +136,12 @@
     <!--Bootstrap Select [ OPTIONAL ]-->
     <script src="/assets/admin/plugins/bootstrap-select/bootstrap-select.min.js"></script>
 
+    <!--DataTables [ OPTIONAL ]-->
+    <script src="/assets/admin/plugins/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="/assets/admin/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+    <script src="/assets/admin/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
 
-    <!--Demo script [ DEMONSTRATION ]-->
-    <script src="/assets/admin/js/demo/nifty-demo.min.js"></script>
-
-
-    <!--Specify page [ SAMPLE ]-->
-    <script src="/assets/admin/js/demo/dashboard.js"></script>
-
+    <script src="~/assets/admin/js/admin.js"></script>
 
     <!--
 

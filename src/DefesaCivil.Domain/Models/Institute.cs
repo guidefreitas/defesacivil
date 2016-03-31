@@ -9,6 +9,7 @@ namespace DefesaCivil.Domain.Models
     public class Institute : BaseModel
     {
         [Required]
+        [StringLength(100)]
         public String Name { get; set; }
 
         [Required]

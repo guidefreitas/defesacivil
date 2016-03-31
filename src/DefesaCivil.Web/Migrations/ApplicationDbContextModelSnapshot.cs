@@ -23,7 +23,8 @@ namespace DefesaCivil.Web.Migrations
                     b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 200);
 
                     b.Property<long?>("StateId")
                         .IsRequired();
@@ -41,7 +42,8 @@ namespace DefesaCivil.Web.Migrations
                     b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 100);
 
                     b.Property<DateTime>("UpdatedAt");
 
@@ -61,7 +63,8 @@ namespace DefesaCivil.Web.Migrations
                     b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 100);
 
                     b.Property<DateTime>("UpdatedAt");
 
@@ -80,7 +83,8 @@ namespace DefesaCivil.Web.Migrations
                     b.Property<long>("Longitude");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 100);
 
                     b.Property<string>("SerialNumber")
                         .IsRequired();

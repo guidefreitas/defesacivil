@@ -1,0 +1,25 @@
+﻿@model DefesaCivil.Domain.Models.Country
+
+<div id="content-container">
+
+    <!--Page Title-->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div id="page-title">
+        <h1 class="page-header text-overflow">Cadastro de País</h1>
+    </div>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--End page title-->
+    <!--Page content-->
+    <!--===================================================-->
+    <div id="page-content">
+        
+        @Html.ValidationSummary()
+
+        @using (Html.BeginForm())
+        {
+            @Html.Partial("_Form", Model)
+        }
+    </div>
+    <!--===================================================-->
+    <!--End page content-->
+</div>

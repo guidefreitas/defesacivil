@@ -1,0 +1,34 @@
+﻿@model DefesaCivil.Domain.Models.Country
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">País</h3>
+            </div>
+
+            <!--Horizontal Form-->
+            <!--===================================================-->
+            <form class="form-horizontal">
+                @Html.AntiForgeryToken()
+                <div class="panel-body">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Name, new { @class = "col-sm-3 control-label" })
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        </div>
+                        @Html.ValidationMessageFor(m => m.Name)
+
+                    </div>
+                </div>
+                <div class="panel-footer text-right">
+                    <button class="btn btn-active-default" type="submit">Cancelar</button>
+                    <button class="btn btn-info" type="submit">Salvar</button>
+                </div>
+            </form>
+            <!--===================================================-->
+            <!--End Horizontal Form-->
+
+        </div>
+    </div>
+</div>

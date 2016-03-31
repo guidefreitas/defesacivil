@@ -14,6 +14,7 @@ namespace DefesaCivil.Domain.Models
         }
 
         [Required]
+        [StringLength(100)]
         public String Name { get; set; }
 
         [Required]

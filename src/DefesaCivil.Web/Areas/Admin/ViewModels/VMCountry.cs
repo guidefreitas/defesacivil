@@ -4,14 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DefesaCivil.Domain.Models
+namespace DefesaCivil.Web.Areas.Admin.ViewModels
 {
-    public class Country : BaseModel
+    public class VMCountry
     {
-        [Required]
-        [StringLength(100)]
-        public String Name { get; set; }
+        public long Id { get; set; }
 
-        public virtual ICollection<State> States { get; set; }
+        [Required]
+        public String Name { get; set; }
     }
 }

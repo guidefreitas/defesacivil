@@ -19,17 +19,6 @@ namespace DefesaCivil.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-        
-            Country c = new Country();
-            c.Name = "Brasil";
-            c.CreatedAt = DateTime.Now;
-            c.UpdatedAt = DateTime.Now;
-
-            context.Countries.Add(c);
-            context.SaveChanges();
-
-            var pais = context.Countries.ToList();
-
             return View();
         } 
     }

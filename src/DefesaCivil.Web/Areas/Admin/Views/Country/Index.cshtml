@@ -1,0 +1,67 @@
+﻿@model List<DefesaCivil.Domain.Models.Country>
+
+<div id="content-container">
+
+    <!--Page Title-->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div id="page-title">
+        <h1 class="page-header text-overflow">Países</h1>
+    </div>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--End page title-->
+    <!--Page content-->
+    <!--===================================================-->
+    <div id="page-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">País</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="pad-btm form-inline">
+                            <div class="row">
+                                <div class="col-sm-6 table-toolbar-left">
+                                    @Html.ActionLink("Adicionar", "Create", "Country", new { area = "Admin" }, new { @class = "btn btn-mint btn-labeled fa fa-plus" })
+                                    <button class="btn btn-default"><i class="fa fa-print"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table id="demo-dt-basic" class="table table-striped" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nome</th>
+                                        <th>Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var country in Model)
+                                    {
+                                        <tr>
+                                            <td>@country.Id</td>
+                                            <td>@country.Name</td>
+                                            <td>
+                                                <a class="btn btn-primary btn-labeled fa fa-edit"></a>
+                                                <a class="btn btn-danger fa fa-trash"></a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--===================================================-->
+    <!--End page content-->
+</div>

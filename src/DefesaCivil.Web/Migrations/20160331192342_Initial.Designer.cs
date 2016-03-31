@@ -8,7 +8,7 @@ using DefesaCivil.Domain.Models;
 namespace DefesaCivil.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160330185610_Initial")]
+    [Migration("20160331192342_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,8 @@ namespace DefesaCivil.Web.Migrations
                     b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 200);
 
                     b.Property<long?>("StateId")
                         .IsRequired();
@@ -42,7 +43,8 @@ namespace DefesaCivil.Web.Migrations
                     b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 100);
 
                     b.Property<DateTime>("UpdatedAt");
 
@@ -62,7 +64,8 @@ namespace DefesaCivil.Web.Migrations
                     b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 100);
 
                     b.Property<DateTime>("UpdatedAt");
 
@@ -81,7 +84,8 @@ namespace DefesaCivil.Web.Migrations
                     b.Property<long>("Longitude");
 
                     b.Property<string>("Name")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasAnnotation("MaxLength", 100);
 
                     b.Property<string>("SerialNumber")
                         .IsRequired();
