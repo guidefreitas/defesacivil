@@ -25,7 +25,8 @@
     "ef": "EntityFramework.Commands"
   },
   "frameworks": {
-    "dnxcore50": {}
+    "dnxcore50": {},
+    "dnx451" : {}
   },
   "exclude": [
     "wwwroot",
