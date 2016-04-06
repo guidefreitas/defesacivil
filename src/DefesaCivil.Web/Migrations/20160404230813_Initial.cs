@@ -29,8 +29,8 @@ namespace DefesaCivil.Web.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     CreatedAt = table.Column<DateTime>(nullable: false),
-                    Latitude = table.Column<long>(nullable: false),
-                    Longitude = table.Column<long>(nullable: false),
+                    Latitude = table.Column<double>(nullable: false),
+                    Longitude = table.Column<double>(nullable: false),
                     Name = table.Column<string>(nullable: false),
                     SerialNumber = table.Column<string>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false)

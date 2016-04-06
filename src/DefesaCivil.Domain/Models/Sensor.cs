@@ -18,10 +18,10 @@ namespace DefesaCivil.Domain.Models
         public String Name { get; set; }
 
         [Required]
-        public long Latitude { get; set; }
+        public double Latitude { get; set; }
 
         [Required]
-        public long Longitude { get; set; }
+        public double Longitude { get; set; }
 
         [Required]
         public String SerialNumber { get; set; }

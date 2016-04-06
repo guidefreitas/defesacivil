@@ -78,9 +78,9 @@ namespace DefesaCivil.Web.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<long>("Latitude");
+                    b.Property<double>("Latitude");
 
-                    b.Property<long>("Longitude");
+                    b.Property<double>("Longitude");
 
                     b.Property<string>("Name")
                         .IsRequired()

@@ -8,7 +8,7 @@ using DefesaCivil.Domain.Models;
 namespace DefesaCivil.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160331192342_Initial")]
+    [Migration("20160404230813_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,9 +79,9 @@ namespace DefesaCivil.Web.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<long>("Latitude");
+                    b.Property<double>("Latitude");
 
-                    b.Property<long>("Longitude");
+                    b.Property<double>("Longitude");
 
                     b.Property<string>("Name")
                         .IsRequired()
