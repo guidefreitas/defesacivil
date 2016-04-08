@@ -9,9 +9,9 @@ using System.IO;
 
 namespace DefesaCivil.Domain.Models
 {
-    public class ApplicationDbContext : IdentityDbContext<User>
+    public class DatabaseContext : IdentityDbContext<User>
     {
-        public ApplicationDbContext()
+        public DatabaseContext()
         {
             if (!_created)
             {

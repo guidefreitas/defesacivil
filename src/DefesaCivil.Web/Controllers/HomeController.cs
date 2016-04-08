@@ -9,9 +9,9 @@ namespace DefesaCivil.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private ApplicationDbContext context;
+        private DatabaseContext context;
 
-        public HomeController(ApplicationDbContext context)
+        public HomeController(DatabaseContext context)
         {
             this.context = context;
         }

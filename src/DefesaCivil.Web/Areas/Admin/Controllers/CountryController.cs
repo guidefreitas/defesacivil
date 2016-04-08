@@ -14,7 +14,7 @@ namespace DefesaCivil.Web.Areas.Admin.Controllers
     public class CountryController : BaseController
     {
 
-        public CountryController(ApplicationDbContext db) : base(db) { }
+        public CountryController(DatabaseContext db) : base(db) { }
 
         public IActionResult Index()
         {

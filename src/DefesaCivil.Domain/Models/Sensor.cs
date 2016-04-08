@@ -26,6 +26,11 @@ namespace DefesaCivil.Domain.Models
         [Required]
         public String SerialNumber { get; set; }
 
+
+        public String Address { get; set; }
+
+        public City City { get; set; }
+
         public virtual ICollection<SensorStatus> Statuses { get; set; }
     }
 }

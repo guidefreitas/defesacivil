@@ -39,10 +39,10 @@ namespace DefesaCivil.Web
             */
             services.AddEntityFramework()
                 .AddSqlite()
-                .AddDbContext<ApplicationDbContext>(options => options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
+                .AddDbContext<Domain.Models.DatabaseContext>(options => options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<Domain.Models.DatabaseContext>()
                 .AddDefaultTokenProviders();
 
             services.AddMvc()
@@ -84,8 +84,9 @@ namespace DefesaCivil.Web
             app.UseMvc(routes =>
             {
                 routes.MapRoute(name: "areaRoute",
-                   template: "{area:exists}/{controller}/{action}",
-                   defaults: new { controller = "Home", action = "Index" });
+                    template: "{area:exists}/{controller}/{action}/{id?}",
+                    defaults: new { controller = "Home", action = "Index" });
+               
 
                 routes.MapRoute(
                     name: "default",

@@ -9,6 +9,6 @@ namespace DefesaCivil.Domain.Models
     {
         public Sensor Sensor { get; set; }
         public SensorStatusType StatusType { get; set; }
-        public int Value { get; set; }
+        public String Value { get; set; }
     }
 }

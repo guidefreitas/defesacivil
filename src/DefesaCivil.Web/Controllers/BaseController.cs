@@ -9,9 +9,9 @@ namespace DefesaCivil.Web.Controllers
 {
     public class BaseController : Controller
     {
-        protected ApplicationDbContext db = null;
+        protected DatabaseContext db = null;
 
-        public BaseController(ApplicationDbContext _db)
+        public BaseController(DatabaseContext _db)
         {
             this.db = _db;
         }

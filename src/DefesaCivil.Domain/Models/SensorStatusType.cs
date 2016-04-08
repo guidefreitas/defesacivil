@@ -7,9 +7,10 @@ namespace DefesaCivil.Domain.Models
 {
     public enum SensorStatusType
     {
-        FLOOD,
-        TEMPERATURE,
-        PRESSURE,
-        NOISE
+        FLOOD = 0,
+        TEMPERATURE = 1,
+        PRESSURE = 2,
+        NOIS = 3,
+        SISMOGRAPHE = 4
     }
 }
