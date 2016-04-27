@@ -18,7 +18,6 @@
 --reference:"C:\Users\guilh\.nuget\packages\EntityFramework.Relational\7.0.0-rc1-final\lib\dotnet5.4\EntityFramework.Relational.dll"
 --reference:"C:\Users\guilh\.nuget\packages\EntityFramework.Relational.Design\7.0.0-rc1-final\lib\dnxcore50\EntityFramework.Relational.Design.dll"
 --reference:"C:\Users\guilh\.nuget\packages\EntityFramework.SQLite\7.0.0-rc1-final\lib\dotnet5.4\EntityFramework.Sqlite.dll"
---reference:"C:\Users\guilh\.nuget\packages\Ix-Async\1.2.5\lib\portable-windows8+net45+wp8\System.Interactive.Async.dll"
 --reference:"C:\Users\guilh\.nuget\packages\Microsoft.AspNet.Authentication\1.0.0-rc1-final\lib\dotnet5.4\Microsoft.AspNet.Authentication.dll"
 --reference:"C:\Users\guilh\.nuget\packages\Microsoft.AspNet.Authentication.Cookies\1.0.0-rc1-final\lib\dotnet5.4\Microsoft.AspNet.Authentication.Cookies.dll"
 --reference:"C:\Users\guilh\.nuget\packages\Microsoft.AspNet.Cryptography.Internal\1.0.0-rc1-final\lib\dotnet5.4\Microsoft.AspNet.Cryptography.Internal.dll"
@@ -54,10 +53,8 @@
 --reference:"C:\Users\guilh\.nuget\packages\Microsoft.Win32.Primitives\4.0.0\ref\dotnet\Microsoft.Win32.Primitives.dll"
 --reference:"C:\Users\guilh\.nuget\packages\Microsoft.Win32.Registry\4.0.0-beta-23516\ref\dotnet5.2\Microsoft.Win32.Registry.dll"
 --reference:"C:\Users\guilh\.nuget\packages\Newtonsoft.Json\6.0.6\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll"
---reference:"C:\Users\guilh\.nuget\packages\Remotion.Linq\2.0.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll"
 --reference:"C:\Users\guilh\.nuget\packages\System.Collections\4.0.11-beta-23516\ref\dotnet5.4\System.Collections.dll"
 --reference:"C:\Users\guilh\.nuget\packages\System.Collections.Concurrent\4.0.11-beta-23516\ref\dotnet5.4\System.Collections.Concurrent.dll"
---reference:"C:\Users\guilh\.nuget\packages\System.Collections.Immutable\1.1.36\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll"
 --reference:"C:\Users\guilh\.nuget\packages\System.Collections.NonGeneric\4.0.0\ref\dotnet\System.Collections.NonGeneric.dll"
 --reference:"C:\Users\guilh\.nuget\packages\System.ComponentModel\4.0.1-beta-23516\ref\dotnet5.1\System.ComponentModel.dll"
 --reference:"C:\Users\guilh\.nuget\packages\System.ComponentModel.Annotations\4.0.11-beta-23516\ref\dotnet5.4\System.ComponentModel.Annotations.dll"
@@ -110,11 +107,11 @@
 --reference:"C:\Users\guilh\.nuget\packages\System.Threading.ThreadPool\4.0.10-beta-23516\ref\dotnet5.2\System.Threading.ThreadPool.dll"
 --reference:"C:\Users\guilh\.nuget\packages\System.Xml.ReaderWriter\4.0.10\ref\dotnet\System.Xml.ReaderWriter.dll"
 --reference:"C:\Users\guilh\.nuget\packages\System.Xml.XDocument\4.0.11-beta-23516\ref\dotnet5.4\System.Xml.XDocument.dll"
-F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\ApplicationDbContext.cs
 F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\BaseModel.cs
 F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\City.cs
 F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\Comunicate.cs
 F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\Country.cs
+F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\DatabaseContext.cs
 F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\Institute.cs
 F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\Sensor.cs
 F:\GUILHERME\Projetos\guilherme\web\DefesaCivil\DefesaCivil.Web\src\DefesaCivil.Domain\Models\SensorStatus.cs

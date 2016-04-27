@@ -18,15 +18,15 @@
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
     "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-final",
     "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
-    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final"
+    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
+    "EntityFramework.Core": "7.0.0-rc1-final"
   },
   "commands": {
     "web": "Microsoft.AspNet.Server.Kestrel",
     "ef": "EntityFramework.Commands"
   },
   "frameworks": {
-    "dnxcore50": {},
-    "dnx451" : {}
+    "dnxcore50": { }
   },
   "exclude": [
     "wwwroot",
