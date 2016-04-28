@@ -6,7 +6,8 @@
   "projectUrl": "",
   "licenseUrl": "",
   "frameworks": {
-    "dnxcore50": { }
+    "dnxcore50": { },
+    "dnx451" : { }
   },
   "dependencies": {
     "EntityFramework.Commands": "7.0.0-rc1-final",
