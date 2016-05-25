@@ -6,6 +6,10 @@ namespace DefesaCivil.Domain.Models
     public class Comunicate : BaseModel
     {
         [Required]
+        [StringLength(300)]
+        public String Title { get; set; }
+
+        [Required]
         [StringLength(1000)]
         public String Message { get; set; }
 

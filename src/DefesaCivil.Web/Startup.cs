@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using DefesaCivil.Domain.Models;
-using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 
 namespace DefesaCivil.Web
 {
@@ -20,7 +15,9 @@ namespace DefesaCivil.Web
 
         public Startup(IHostingEnvironment env) {
             Configuration = new ConfigurationBuilder()
-                            .AddJsonFile("config.json")
+                            .SetBasePath(env.ContentRootPath)
+                            .AddJsonFile("config.json", false, true)
+                            .AddJsonFile($"config.{env.EnvironmentName}.json", optional: true)
                             .AddEnvironmentVariables()
                             .Build();
         }
@@ -37,13 +34,21 @@ namespace DefesaCivil.Web
                 .AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
             */
-            services.AddEntityFramework()
-                .AddSqlite()
-                .AddDbContext<Domain.Models.DatabaseContext>(options => options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
 
+            services.AddApplicationInsightsTelemetry(Configuration);
+
+            var dbConfig = Configuration["Data:DefaultConnection:ConnectionString"];
+
+            var DbBuilder = new DbContextOptionsBuilder<DefesaCivil.Domain.Models.DatabaseContext>();
+
+            services.AddEntityFrameworkInMemoryDatabase()
+                    .AddDbContext<DefesaCivil.Domain.Models.DatabaseContext>();
+
+            /*
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<Domain.Models.DatabaseContext>()
                 .AddDefaultTokenProviders();
+            */
 
             services.AddMvc()
                 .AddJsonOptions(options => {
@@ -51,8 +56,8 @@ namespace DefesaCivil.Web
                         Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
 
-            services.AddRouting();
-            services.AddMvc();
+            //services.AddRouting();
+            //services.AddMvc();
 
             // Add application services.
             //services.AddTransient<IEmailSender, AuthMessageSender>();
@@ -60,9 +65,13 @@ namespace DefesaCivil.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            
+            var logConfig = Configuration.GetSection("Logging");
+            loggerFactory.AddConsole();
+            loggerFactory.AddDebug();
+
+            app.UseApplicationInsightsRequestTelemetry();
 
             if (env.IsDevelopment())
             {
@@ -75,11 +84,11 @@ namespace DefesaCivil.Web
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseIISPlatformHandler();
+            //app.UseIISPlatformHandler();
 
             app.UseStaticFiles();
 
-            app.UseIdentity();
+            //app.UseIdentity();
 
             app.UseMvc(routes =>
             {
@@ -95,6 +104,6 @@ namespace DefesaCivil.Web
         }
 
         // Entry point for the application.
-        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
+        //public static void Main(string[] args) => WebApplication.Run<Startup>(args);
     }
 }

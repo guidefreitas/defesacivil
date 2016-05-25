@@ -1,8 +1,18 @@
 ﻿{
   "Data": {
     "DefaultConnection": {
-      /* "ConnectionString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DefesaCivil;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" */
       "ConnectionString": "Data source=F:\\GUILHERME\\Projetos\\guilherme\\web\\DefesaCivil\\DefesaCivil\\src\\DefesaCivil.Web\\App_Data\\database.db"
+    }
+  },
+  "ApplicationInsights": {
+    "InstrumentationKey": ""
+  },
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
     }
   }
 }

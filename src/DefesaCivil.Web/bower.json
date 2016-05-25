@@ -1,6 +1,12 @@
 {
-  "name": "ASP.NET",
-  "private": true,
-  "dependencies": {},
-  "directory": "wwwroot/lib"
+  "name": "defesacivil",
+  "homepage": "https://github.com/guidefreitas/defesacivil",
+  "authors": [
+    "Guilherme Defreitas Juraszek <guilherme.defreitas@gmail.com>"
+  ],
+  "description": "defesacivil",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true
 }

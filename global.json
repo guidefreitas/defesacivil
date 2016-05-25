@@ -1,9 +1,9 @@
 {
   "projects": [ "src", "test" ],
   "sdk": {
-    "version": "1.0.0-rc1-update1"
+    "version": "1.0.0-preview1-002702"
   },
   "dependencies": {
-    "NETStandard.Library": "1.0.0-rc2-23704"
+    "NETStandard.Library": "1.0.0-rc2-23727"
   }
 }

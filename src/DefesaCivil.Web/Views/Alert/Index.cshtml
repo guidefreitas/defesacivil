@@ -1,0 +1,58 @@
+﻿@model List<DefesaCivil.Domain.Models.Comunicate>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Breadcrumbs{
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Últimos alertas</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/Alert">Alertas</a></li>
+            </ul>
+        </div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+}
+
+<div class="row">
+    <div class="col-md-12">
+        @foreach (var alert in Model)
+        {
+            <div class="row clients-page">
+                <div class="col-md-2">
+                    <img src="/assets/site/img/alert_image.jpg" style="width: 124px;" class="img-responsive hover-effect" alt="" />
+                </div>
+                <div class="col-md-10">
+                    <h3>@alert.Title</h3>
+                    <ul class="list-inline">
+                        @if (alert.Institute != null)
+                        {
+                            <li><i class="fa fa-map-marker color-green"></i>@alert.Institute.Name</li>
+                        }
+                        
+                        <li><i class="fa fa-calendar color-green"></i>@alert.DatePublicated.ToString("dd/MM/yyyy HH:mm")</li>
+                    </ul>
+                    <p>@alert.Message</p>
+                </div>
+            </div>
+
+        }
+
+        <!-- Pagination -->
+        <div class="text-center md-margin-bottom-30">
+            <ul class="pagination">
+                <li><a href="#">«</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="active"><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">»</a></li>
+            </ul>
+        </div>
+        <!-- End Pagination -->
+    </div><!--/col-md-12-->
+</div><!--/row-->

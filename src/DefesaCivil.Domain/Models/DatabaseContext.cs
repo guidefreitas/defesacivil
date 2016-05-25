@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Data.Entity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Data.Entity.Infrastructure;
 using System.IO;
+using Microsoft.EntityFrameworkCore;
 
 namespace DefesaCivil.Domain.Models
 {
-    public class DatabaseContext : IdentityDbContext<User>
+    public class DatabaseContext :  DbContext //IdentityDbContext<User>
     {
         public DatabaseContext()
         {
             if (!_created)
             {
                 _created = true;
-                Database.EnsureCreated();
+                //Database.EnsureCreated();
             }
         }
 
